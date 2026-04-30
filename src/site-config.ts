@@ -1,39 +1,39 @@
 export const siteConfig = {
-  author: 'Kieran Wang',
-  title: 'Vitesse theme for Astro',
-  subtitle: 'Vitesse theme for Astro, supports Vue and UnoCSS.',
-  description: 'A Minimal, SEO-friendly portfolio and blog theme for Astro.',
-  image: {
-    src: '/hero.jpg',
-    alt: 'Website Main Image',
-  },
-  email: 'kieranwme@gmail.com',
+  author: 'Oscar Montenegro',
+  title: 'Osempu Portfolio',
+  subtitle: 'Osempu Software Engineering Portfolio',
+  description: 'My personal software engineering portfolio showcasing projects, blog posts, and talks.',
+  // image: {
+  //   src: '/hero.jpg',
+  //   alt: 'Website Main Image',
+  // },
+  email: 'osarosempu@gmail.com',
   socialLinks: [
     {
       text: 'GitHub',
-      href: 'https://github.com/kieranwv/astro-theme-vitesse',
+      href: 'https://github.com/osempu',
       icon: 'i-simple-icons-github',
       header: 'i-ri-github-line',
     },
     {
       text: 'Twitter',
-      href: '',
+      href: 'https://x.com/OscarOsempu',
       icon: 'i-simple-icons-x',
       header: 'i-ri-twitter-x-line',
     },
     {
       text: 'Linkedin',
-      href: '',
+      href: 'https://www.linkedin.com/in/montenegro-oscar/',
       icon: 'i-simple-icons-linkedin',
     },
-    {
-      text: 'Instagram',
-      href: '',
-      icon: 'i-simple-icons-instagram',
-    },
+    // {
+    //   text: 'Instagram',
+    //   href: '',
+    //   icon: 'i-simple-icons-instagram',
+    // },
     {
       text: 'Youtube',
-      href: '',
+      href: 'https://www.youtube.com/@unitcoding6783',
       icon: 'i-simple-icons-youtube',
     },
   ],
@@ -44,21 +44,29 @@ export const siteConfig = {
     },
     navLinks: [
       {
-        text: 'Blog',
-        href: '/blog',
-      },
-      {
-        text: 'Notes',
-        href: '/blog/notes',
-      },
-      {
-        text: 'Talks',
-        href: '/blog/talks',
-      },
-      {
         text: 'Projects',
         href: '/projects',
       },
+      {
+        text: 'Blog',
+        href: 'https://unitcoding.com/',
+      },
+      {
+        text: 'Experience',
+        href: 'https://unitcoding.com/',
+      },
+      {
+        text: 'Skills',
+        href: 'https://unitcoding.com/',
+      },
+      // {
+      //   text: 'Notes',
+      //   href: '/blog/notes',
+      // },
+      // {
+      //   text: 'Talks',
+      //   href: '/blog/talks',
+      // },
     ],
   },
   page: {
@@ -88,12 +96,8 @@ export const siteConfig = {
         href: '/md-style',
       },
       {
-        text: 'View on Astro',
-        href: 'https://astro.build/themes/details/vitesse-theme-for-astro/',
-      },
-      {
         text: 'GitHub Repository',
-        href: 'https://github.com/kieranwv/astro-theme-vitesse',
+        href: 'https://github.com/osempu/',
       },
     ],
   },

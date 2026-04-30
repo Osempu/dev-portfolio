@@ -78,31 +78,38 @@ function toggleNavDrawer() {
   <header
     id="header" :class="{ 'header-bg-blur': scroll > 20 }"
     view-transition-name="site-header"
-    class="!fixed bg-transparent z-899 w-screen h-20 px-6 flex justify-between items-center relative"
+    class="bg-transparent z-899 md:w-3/5 w-full mx-auto h-20 px-6 flex justify-between items-center relative"
   >
     <div class="flex items-center h-full">
       <a href="/" mr-6 aria-label="Header Logo Image">
         <img width="32" height="32" :src="siteConfig.header.logo.src" :alt="siteConfig.header.logo.alt">
+        <!-- <span><nav class="text-link text-xl">Osempu  </nav></span> -->
       </a>
-      <nav class="sm:flex hidden flex-wrap gap-x-6 position-initial flex-row">
-        <a
-          v-for="link in navLinks" :key="link.text" :aria-label="`${link.text}`" :target="getLinkTarget(link.href)"
-          nav-link :href="link.href"
-        >
-          {{ link.text }}
-        </a>
-      </nav>
       <div sm:hidden h-full flex items-center @click="toggleNavDrawer()">
         <menu i-ri-menu-2-fill />
       </div>
     </div>
+
+    <nav
+      class="sm:flex hidden flex-wrap gap-x-6 flex-row rounded-full border-gray-400 border-solid border-1 border-link px-6 py-3 font-600 text-sm transform transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)]
+            hover:scale-105"
+    >
+      <a
+        v-for="link in navLinks" :key="link.text" :aria-label="`${link.text}`" :target="getLinkTarget(link.href)"
+        nav-link :href="link.href"
+      >
+        {{ link.text }}
+      </a>
+    </nav>
+
+    <!-- SOCIAL LINKS -->
     <div class="flex gap-x-6">
       <a
         v-for="link in socialLinks" :key="link.text" :aria-label="`${link.text}`" :class="link.icon" nav-link
         :target="getLinkTarget(link.href)" :href="link.href"
       />
 
-      <a nav-link target="_blank" href="/rss.xml" i-ri-rss-line aria-label="RSS" />
+      <!-- <a nav-link target="_blank" href="/rss.xml" i-ri-rss-line aria-label="RSS" /> -->
       <ThemeToggle />
     </div>
   </header>
