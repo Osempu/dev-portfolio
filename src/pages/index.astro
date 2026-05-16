@@ -1,7 +1,10 @@
 ---
-import ExperienceComponent from '@/components/Experience'
 import BaseLayout from '@/layouts/BaseLayout.astro'
+import ExperienceSection from '@/components/ExperienceSection.vue'
+import SkillsSection from '@/components/SkillsSection.vue'
+import ProjectsSection from '@/components/ProjectsSection.vue'
 import siteConfig from '@/site-config'
+import { experience, skills, projects } from '@/portfolio-data'
 ---
 
 <BaseLayout description={siteConfig.description}>
@@ -21,172 +24,11 @@ import siteConfig from '@/site-config'
     </div>
   </div>
 
-  <!-- <ExperienceComponent /> -->
+  <ExperienceSection client:load items={experience} />
 
-  <!-- <article class="prose"> -->
-  <!-- <h1 class="text-title">Osempu</h1> -->
-  <!-- <p>Welcome to my personal space and portfolio</p> -->
-  <!-- <p> <img width="640" height="360" src="/hero.jpg" alt="Hero Image" /> -->
-  <!-- <img width="640" height="360" src="/banner.png" alt="Hero Image" /> -->
-  <!-- </article> -->
+  <SkillsSection client:load categories={skills} />
 
-  <h3 class="text-2xl font-800 mb-3">🟣 Experience</h3>
-  <div>
-    <div>
-      <h4 class="font-600">👨🏾‍💻 Tata Consultancy Services</h4>
-      <span>Software Engineer</span> | <span>2023 - Present</span>
-      <ul class="pl-7 list-disc">
-        <li>
-          Delivered new features for a healthcare logistics platform, building Angular/TypeScript front-end modules and
-          .NET/C# REST services on the backend.
-        </li>
-        <li>Built a Postman automated test suite improving API reliability and reducing production issues by 60%.</li>
-        <li>
-          Enhanced application performance and stability, resolving user issues within SLA and ensuring continuous
-          deployment of features and bug fixes every sprint.
-        </li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="font-600">👨🏾‍💻 Unosquare</h4>
-      <span>Software Engineer</span> | <span>2022 - 2023</span>
-      <ul style="list-style: disc;" class="pl-7">
-        <li>
-          Supported and enhanced ASP.NET Core Web APIs for a large-scale banking platform serving thousands of daily
-          users.
-        </li>
-        <li>
-          Designed and implemented solutions for the retail system, improving transaction reliability and system
-          scalability.
-        </li>
-        <li>
-          Applied proactive system monitoring, analyzing logs/metrics to prevent downtime and ensuring high
-          availability.
-        </li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="font-600">👨🏾‍💻 Softtek</h4>
-      <span>Software Engineer</span> | <span>2021 - 2022</span>
-      <ul style="list-style: disc;" class="pl-7">
-        <li>
-          Identified and resolved critical bugs and security vulnerabilities in ASP.NET REST banking services, enhancing
-          compliance with industry standards.
-        </li>
-        <li>
-          Maintained and modernized legacy applications (WebForms & WCF), extending their lifecycle and reducing
-          operational risks.
-        </li>
-        <li>Collaborated in code reviews, driving higher code quality and reducing bug reoccurrence by 25%.</li>
-      </ul>
-    </div>
-
-    <div>
-      <h4 class="font-600">👨🏾‍💻 Fortia Technology</h4>
-      <span>Software Engineer(Lead Developer) </span> | <span>2021 - 2021</span>
-      <ul style="list-style: disc;" class="pl-7">
-        <li>
-          Designed and developed a modular ASP.NET REST web service integrating biometric devices from multiple vendors,
-          enabling real-time employee attendance tracking.
-        </li>
-        <li>
-          Applied design patterns to build a scalable and testable service, supporting easy integration of new biometric
-          providers.
-        </li>
-        <li>
-          Engineered the database schema and stored procedures, improving enrollment efficiency and data accuracy.
-        </li>
-      </ul>
-    </div>
-
-    <div>
-      <h4 class="font-600">👨🏾‍💻 Checadores</h4>
-      <span>Junior Fullstack Engineer (Lead Developer) </span> | <span>2019 - 2020</span>
-      <ul style="list-style: disc;" class="pl-7">
-        <li>
-          Led the development of a .NET Core solution for biometric device integration, boosting product compatibility
-          and expanding company sales opportunities by 40%.
-        </li>
-        <li>
-          Developed a Windows service automating employee attendance management, reducing manual workload for HR
-          departments
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <h3 class="text-2xl font-800">🟣 Skills</h3>
-  <div>
-    <div class="border-solid rounded-md border-gray-300 border-1 p-5 mb-4">
-      <h3 class="mb-2">🧑🏾‍💻 Languages & Frameworks</h3>
-      <ul class="flex flex-row justify-start gap-x-4 gap-y-2 flex-wrap">
-        <li>C#</li>
-        <li>Javascript/Typescript</li>
-        <li>Python</li>
-        <li>HTML & CSS</li>
-        <li>SQL</li>
-        <li>T-SQL</li>
-        <li>.NET Core</li>
-        <li>React</li>
-        <li>Angular</li>
-        <li>Astro</li>
-      </ul>
-    </div>
-    <div class="border-solid rounded-md border-gray-300 border-1 p-5 mb-4">
-      <h3 class="mb-2">🛠️ DevOps & Tools</h3>
-      <ul class="flex flex-row justify-start gap-x-4 gap-y-2 flex-wrap">
-        <li>Git</li>
-        <li>GitHub</li>
-        <li>Azure</li>
-        <li>Azure Devops</li>
-        <li>Docker</li>
-        <li>Github Actions</li>
-        <li>Postman</li>
-        <li>LLMS</li>
-        <li>Github Copilot</li>
-        <li>Claude Code/ Open Code</li>
-      </ul>
-    </div>
-    <div class="border-solid rounded-md border-gray-300 border-1 p-5 mb-4">
-      <h3 class="mb-2">💡 Soft Skills</h3>
-      <ul class="flex flex-row justify-start gap-x-4 gap-y-2 flex-wrap">
-        <li>Technical Leadership</li>
-        <li>Collaboration</li>
-        <li>Mentorship</li>
-        <li>Ownership & Accountability</li>
-        <li>Conflict Resolution</li>
-      </ul>
-    </div>
-  </div>
-
-  <h3 class="text-2xl font-800">🟣 Projects</h3>
-  <div>
-    <span>Icon</span>
-    <div>
-      <div>
-        <h3>Project Title</h3>
-        <div>Project Short Description</div>
-      </div>
-
-      <div>
-        <span>Display More Icon</span>
-        <span>GitHub Link Icons</span>
-      </div>
-
-      <!-- Hidden section by Overflow -->
-      <div>
-        <p>Project Full Description</p>
-        <ul>
-          <li>Project Feature 1</li>
-          <li>Project Feature 2</li>
-        </ul>
-      </div>
-
-      <div>
-        <span>Tech Stack Icons</span>
-      </div>
-    </div>
-  </div>
+  <ProjectsSection client:load projects={projects} />
 
   <hr class="hr-line" />
   <p>Find me on</p>
