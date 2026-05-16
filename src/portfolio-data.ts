@@ -11,6 +11,12 @@ export interface SkillCategory {
   items: string[]
 }
 
+export interface GithubStats {
+  stars: number
+  forks: number
+  language?: string
+}
+
 export interface ProjectData {
   title: string
   shortDescription: string
@@ -19,6 +25,8 @@ export interface ProjectData {
   techStack: string[]
   githubUrl?: string
   liveUrl?: string
+  image?: string
+  githubStats?: GithubStats
 }
 
 export const experience: ExperienceItem[] = [
@@ -104,5 +112,11 @@ export const projects: ProjectData[] = [
     ],
     techStack: ['Astro', 'Vue 3', 'TypeScript', 'UnoCSS'],
     githubUrl: 'https://github.com/osempu/dev-portfolio',
+    image: '/public/dev-portfolio.png',
+    githubStats: {
+      stars: 0,
+      forks: 0,
+      language: 'TypeScript',
+    },
   },
 ]

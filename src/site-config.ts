@@ -19,7 +19,6 @@ export const siteConfig = {
       text: 'Twitter',
       href: 'https://x.com/OscarOsempu',
       icon: 'i-simple-icons-x',
-      header: 'i-ri-twitter-x-line',
     },
     {
       text: 'Linkedin',
@@ -44,29 +43,22 @@ export const siteConfig = {
     },
     navLinks: [
       {
+        text: 'Experience',
+        href: '/#experience',
+      },
+      {
+        text: 'Skills',
+        href: '/#skills',
+      },
+      {
         text: 'Projects',
-        href: '/projects',
+        href: '/#projects',
       },
       {
         text: 'Blog',
         href: 'https://unitcoding.com/',
+        external: true,
       },
-      {
-        text: 'Experience',
-        href: 'https://unitcoding.com/',
-      },
-      {
-        text: 'Skills',
-        href: 'https://unitcoding.com/',
-      },
-      // {
-      //   text: 'Notes',
-      //   href: '/blog/notes',
-      // },
-      // {
-      //   text: 'Talks',
-      //   href: '/blog/talks',
-      // },
     ],
   },
   page: {

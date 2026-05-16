@@ -24,11 +24,11 @@ import { experience, skills, projects } from '@/portfolio-data'
     </div>
   </div>
 
-  <ExperienceSection client:load items={experience} />
+  <ExperienceSection id="experience" client:load items={experience} />
 
-  <SkillsSection client:load categories={skills} />
+  <SkillsSection id="skills" client:load categories={skills} />
 
-  <ProjectsSection client:load projects={projects} />
+  <ProjectsSection id="projects" client:load projects={projects} />
 
   <hr class="hr-line" />
   <div class="flex-col justify-items-center gap-6 !pt-0 mb-4">
