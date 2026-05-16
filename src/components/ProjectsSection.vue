@@ -15,28 +15,28 @@ function toggle(title: string) {
 </script>
 
 <template>
-  <section>
-    <h3 class="text-2xl font-800 mb-3">
-      🟣 Projects
+  <section class="mt-10">
+    <h3 class="text-3xl font-600 mb-3">
+      Projects
     </h3>
     <div class="flex flex-col gap-4">
       <div
         v-for="project in projects"
         :key="project.title"
-        class="border-solid rounded-md border-gray-300 border-1 p-5"
+        class="border-solid rounded-md border-gray-300 dark:border-gray-700 border-1 p-5"
       >
         <div class="flex justify-between items-start">
           <div>
-            <h3 class="font-600 text-lg">
+            <h3 class="font-600 text-lg text-zinc-900 dark:text-zinc-100">
               {{ project.title }}
             </h3>
-            <p class="text-sm op-75">
+            <p class="text-sm text-zinc-600 dark:text-zinc-400">
               {{ project.shortDescription }}
             </p>
           </div>
           <div class="flex gap-2 items-center ml-4 shrink-0">
             <button
-              class="op-70 hover:op-100 transition-opacity"
+              class="text-zinc-700 dark:text-zinc-300 op-70 hover:op-100 transition-opacity"
               :aria-label="expanded.has(project.title) ? 'Collapse' : 'Expand'"
               @click="toggle(project.title)"
             >
@@ -46,7 +46,7 @@ function toggle(title: string) {
               v-if="project.githubUrl"
               :href="project.githubUrl"
               target="_blank"
-              class="op-70 hover:op-100 transition-opacity"
+              class="text-zinc-700 dark:text-zinc-300 op-70 hover:op-100 transition-opacity"
               aria-label="GitHub repository"
             >
               <i class="i-simple-icons-github" />
@@ -55,7 +55,7 @@ function toggle(title: string) {
               v-if="project.liveUrl"
               :href="project.liveUrl"
               target="_blank"
-              class="op-70 hover:op-100 transition-opacity"
+              class="text-zinc-700 dark:text-zinc-300 op-70 hover:op-100 transition-opacity"
               aria-label="Live site"
             >
               <i class="i-ri-external-link-line" />
@@ -64,10 +64,10 @@ function toggle(title: string) {
         </div>
 
         <div v-if="expanded.has(project.title)" class="mt-4">
-          <p class="mb-3">
+          <p class="mb-3 text-zinc-700 dark:text-zinc-300">
             {{ project.fullDescription }}
           </p>
-          <ul class="pl-5 list-disc mb-3">
+          <ul class="pl-5 list-disc mb-3 text-zinc-600 dark:text-zinc-400">
             <li v-for="feature in project.features" :key="feature">
               {{ feature }}
             </li>
@@ -76,7 +76,7 @@ function toggle(title: string) {
             <span
               v-for="tech in project.techStack"
               :key="tech"
-              class="border-solid rounded border-gray-300 border-1 px-2 py-0.5 text-sm"
+              class="border-solid rounded border-gray-300 dark:border-gray-600 border-1 px-2 py-0.5 text-sm text-zinc-700 dark:text-zinc-300"
             >
               {{ tech }}
             </span>
