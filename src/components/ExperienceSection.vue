@@ -25,7 +25,7 @@ defineProps<{ items: ExperienceItem[] }>()
 
         <!-- content card (this is what scales + gets the glass effect) -->
         <div
-          class="rounded-md cursor-default transition-all duration-300 px-4 py-3
+          class="rounded-md cursor-default transition-all duration-300 px-4 p-3 mt-[-0.5rem]
                  hover:scale-[1.02] hover:shadow-lg
                  hover:bg-gray-100/70 hover:backdrop-blur-sm
                  dark:hover:bg-white/5 dark:hover:backdrop-blur-sm"

@@ -9,7 +9,7 @@ import { experience, skills, projects } from '@/portfolio-data'
 
 <BaseLayout description={siteConfig.description}>
   <div class="flex-col justify-items-center gap-6 !pt-0 mb-4">
-    <h1 class="text-5xl text-title font-600 mb-3">Osempu</h1>
+    <h1 class="text-5xl text-title font-600 mb-3 text-blue-500 dark:text-emerald-400">Osempu</h1>
     <div class="font-800 text-xl flex align-items-center justify-items-center text-zinc-700 dark:text-zinc-300">
       <span class="mr-3">Software Engineer</span>
       <span class="ml-3 mr-3">AI Development</span>
@@ -31,21 +31,17 @@ import { experience, skills, projects } from '@/portfolio-data'
   <ProjectsSection client:load projects={projects} />
 
   <hr class="hr-line" />
-  <p>Find me on</p>
-  <p class="flex gap-x-4 gap-y-2 flex-wrap">
-    {
-      siteConfig.socialLinks.map((link) => (
-        <a aria-label={link.text} href={link.href} target="_blank" class="prose-link">
-          <i class:list={[link.icon]} />
-          {link.text}
-        </a>
-      ))
-    }
-  </p>
-  <p>
-    If you have any questions, please email me at
-    <a prose-link aria-label={siteConfig.email} href={`mailto:${siteConfig.email}`}>
-      {siteConfig.email}
-    </a>.
-  </p>
+  <div class="flex-col justify-items-center gap-6 !pt-0 mb-4">
+    <p class="mb-4">Find me on:</p>
+    <p class="flex gap-x-4 gap-y-2 flex-wrap">
+      {
+        siteConfig.socialLinks.map((link) => (
+          <a aria-label={link.text} href={link.href} target="_blank" class="prose-link">
+            <i class:list={[link.icon]} />
+            {link.text}
+          </a>
+        ))
+      }
+    </p>
+  </div>
 </BaseLayout>
