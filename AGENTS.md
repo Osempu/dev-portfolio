@@ -128,7 +128,7 @@ interface Props {
   post: CollectionPosts
 }
 const { post } = Astro.props
----
+---
 ```
 
 ### Vue Components (`.vue`)
