@@ -56,7 +56,9 @@ jobs:
     steps:
       - name: Trigger Dokploy deployment
         run: |
-          curl -sS -X POST \
+          set -e
+          echo "Triggering deploy for app ${{ secrets.DOKPLOY_APP_ID }}"
+          curl -sS --fail-with-body -X POST \
             "http://${{ secrets.DOKPLOY_DOMAIN }}/api/application.deploy" \
             -H "accept: application/json" \
             -H "x-api-key: ${{ secrets.DOKPLOY_API_KEY }}" \
