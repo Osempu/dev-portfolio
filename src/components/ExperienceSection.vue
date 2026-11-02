@@ -6,20 +6,20 @@ defineProps<{ items: ExperienceItem[] }>()
 
 <template>
   <section>
-    <h3 class="text-3xl font-800 mb-6">
+    <h3 class="text-3xl font-800 mb-6 text-center md:text-left">
       Experience
     </h3>
     <div class="relative flex flex-col">
       <!-- vertical timeline line -->
-      <div class="absolute left-3 top-2 bottom-2 w-px bg-black dark:bg-white opacity-20" />
+      <div class="sm:block hidden absolute left-3 top-2 bottom-2 w-px bg-black dark:bg-white opacity-20" />
 
       <div
         v-for="item in items"
         :key="item.company"
-        class="relative pl-10 pb-8 last:pb-0"
+        class="relative sm:pl-10 pb-8 last:pb-0"
       >
         <!-- timeline dot (outside the scaling wrapper so it stays fixed) -->
-        <div class="absolute left-[4px] top-1.5 w-[1rem] h-[1rem] rounded-full bg-black dark:bg-white opacity-90 flex items-center justify-center">
+        <div class="sm:flex hidden absolute left-[4px] top-1.5 w-[1rem] h-[1rem] rounded-full bg-black dark:bg-white opacity-90 items-center justify-center">
           <div class="w-3 h-3 rounded-full bg-white dark:bg-zinc-900" />
         </div>
 

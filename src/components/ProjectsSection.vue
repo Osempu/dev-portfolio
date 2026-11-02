@@ -56,7 +56,7 @@ function onAfterLeave(el: Element) {
 
 <template>
   <section class="mt-10">
-    <h3 class="text-3xl font-600 mb-3">
+    <h3 class="text-3xl font-600 mb-3 text-center md:text-left">
       Projects
     </h3>
     <div class="flex flex-col gap-4">
@@ -74,14 +74,14 @@ function onAfterLeave(el: Element) {
           <!-- image -->
           <div
             v-if="project.image"
-            class="w-40 h-25 shrink-0 rounded-lg overflow-hidden bg-gray-200 dark:bg-zinc-800"
+            class="sm:block hidden w-40 h-25 shrink-0 rounded-lg overflow-hidden bg-gray-200 dark:bg-zinc-800"
           >
             <img :src="project.image" :alt="project.title" class="w-full h-full object-cover">
           </div>
           <!-- placeholder when no image -->
           <div
             v-else
-            class="w-40 h-25 shrink-0 rounded-lg bg-gray-200 dark:bg-zinc-800 flex items-center justify-center"
+            class="sm:flex hidden w-40 h-25 shrink-0 rounded-lg bg-gray-200 dark:bg-zinc-800 items-center justify-center"
           >
             <i class="i-ri-code-box-line text-2xl text-gray-400 dark:text-zinc-500" />
           </div>
@@ -111,7 +111,7 @@ function onAfterLeave(el: Element) {
             </p>
 
             <!-- github stats row -->
-            <div class="flex items-center justify-between text-xs text-zinc-500 dark:text-zinc-500">
+            <div class="flex sm:flex-row flex-col sm:items-center sm:justify-between gap-2 text-xs text-zinc-500 dark:text-zinc-500">
               <div v-if="project.githubStats" class="flex gap-4">
                 <span v-if="project.githubStats.language" class="flex items-center gap-1">
                   <span class="w-2.5 h-2.5 rounded-full bg-blue-500 dark:bg-emerald-400" />
@@ -127,7 +127,7 @@ function onAfterLeave(el: Element) {
                 </span>
               </div>
               <div v-else />
-              <!-- links aligned to the right -->
+              <!-- links -->
               <div class="flex gap-3 items-center">
                 <a
                   v-if="project.githubUrl"
