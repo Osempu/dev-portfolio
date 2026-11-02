@@ -6,14 +6,14 @@ defineProps<{ categories: SkillCategory[] }>()
 
 <template>
   <section class="mt-10">
-    <h3 class="text-3xl font-600 mb-3">
+    <h3 class="text-3xl font-600 mb-3 text-center md:text-left">
       Skills
     </h3>
     <div class="flex flex-col gap-4">
       <div
         v-for="category in categories"
         :key="category.title"
-        class="border-solid rounded-md border-gray-300 dark:border-gray-700 p-7
+        class="border-solid rounded-md border-gray-300 dark:border-gray-700 p-4 sm:p-7
                transition-all duration-300 cursor-default
                hover:scale-[1.02] hover:shadow-lg
                hover:bg-gray-100/70 hover:backdrop-blur-sm hover:border-gray-400
