@@ -9,5 +9,5 @@ RUN npm run build
 # Runtime stage (serves the static Astro output)
 FROM nginx:alpine AS runtime
 COPY --from=build /app/dist /usr/share/nginx/html
-EXPOSE 81
+EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
