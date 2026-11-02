@@ -112,7 +112,7 @@ export const projects: ProjectData[] = [
     ],
     techStack: ['Astro', 'Vue 3', 'TypeScript', 'UnoCSS'],
     githubUrl: 'https://github.com/osempu/dev-portfolio',
-    image: '/public/dev-portfolio.png',
+    image: '/dev-portfolio.png',
     githubStats: {
       stars: 0,
       forks: 0,
